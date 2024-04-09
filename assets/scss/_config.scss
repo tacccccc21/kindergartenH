@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+// ==========================================================================
+//
+//  Breakpoints
+//
+// ==========================================================================
+
+$breakpoint_xxs_min: 0;
+$breakpoint_xxs_max: 320px;
+$breakpoint_xs_min: 0;
+$breakpoint_xs_max: 768px;
+$breakpoint_lg_min: 769px;
+$breakpoint_lg_max: 1319px;
+$breakpoint_xlg_min: 1320px;
+
+
+// ==========================================================================
+//
+//  maxwidth
+//
+// ==========================================================================
+
+$max-width_xxs: 95.625%;
+$max-width_xs: 90.625%;
+$max-width_lg: 940px;
+
+// ==========================================================================
+//
+//  color
+//
+// ==========================================================================
+$main-color: #004EA2;
+$company-color: #005198;
+$sub-color: #2B4CF0;
+$accent-color: #fdfd54;
+
+$main-yellow: #FFF18D;
+$main-pink: #FFDAD8;
+$main-green: #DFFF8F;
+
+$sub-yellow: #FFE631;
+$sub-pink: #FF746C;
+$sub-green: #C3FF2C;
+
+$accent-blown: #E4AC79;
+$accent-beige: #FFF7E1;
+$base-yellow: #FFF18D;
+$background: #FFFDED;

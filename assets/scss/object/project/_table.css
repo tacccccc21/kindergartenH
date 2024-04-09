@@ -1,0 +1,19 @@
+.p-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.p-table__row {
+  border-bottom: 1px solid yellow;
+}
+
+.p-table__header, .p-table__cell {
+  padding: 12px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.p-table__header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}

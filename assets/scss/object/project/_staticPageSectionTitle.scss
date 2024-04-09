@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Zen+Maru+Gothic:wght@300&display=swap');
+
+.p-SPSTitle{
+  font-size: 36px;
+  font-weight: 100;
+  font-family: 'Noto Sans JP',sans-serif;
+  margin-bottom: 20px;
+  display: inline-block;
+  line-height: 1.2;
+  @include xs{
+    font-size: 24px;
+    }
+}

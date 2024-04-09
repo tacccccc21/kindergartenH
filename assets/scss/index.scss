@@ -1,0 +1,518 @@
+@charset "utf-8";
+
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+
+.cursor-pointer {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  /* 例として赤色を設定 */
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+  opacity: 0.7;
+}
+
+.cursor-pointer.special-cursor {
+  background-color: #FFF;
+}
+
+.mv {
+  margin-bottom: 80px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  background-color: #FFF7E1;
+  padding-top: 0;
+  @include lg{
+  }
+  @include xs{
+    // margin-top: 60px;
+    // height: calc(100vh - 60px);
+    height: auto;
+    margin-bottom: 100px;
+    padding-bottom: 40px;
+  }
+  &__container{
+    position: relative;
+    &__slider {
+      @include xs{
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      &__each{
+        display: flex;
+          /* Flexboxを有効化 */
+          justify-content: center;
+          /* 水平方向の中央揃え */
+          align-items: center;
+          /* 垂直方向の中央揃え */
+          height: 100%;
+          /* スライドの高さを親要素と同じにする */
+
+          border-radius: 20%;
+          width: 1000px !important;
+          @include xs{
+            width: 100% !important; 
+          }
+          >img{
+            // max-width: 100%;
+              /* 画像の最大幅をスライドの幅に合わせる */
+              // max-height: 100%;
+              /* 画像の最大高さをスライドの高さに合わせる */
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              /* 画像のアスペクト比を保持 */
+          }
+      }
+    }
+    &__pagenation{
+      bottom: -20px !important;
+    }
+    .prev{
+        left: 10vw;
+        width: 70px;
+        /* 画像の幅に合わせて調整 */
+        height: 70px;
+        /* 画像の高さに合わせて調整 */
+        background-size: cover;
+        /* 画像をボタンサイズにフィットさせる */
+        background-repeat: no-repeat;
+        background-image: url('/assets/image/top/arrowLeft.svg');
+        @include xs{
+          width: 40px;
+          height: 40px;
+          left: 20px;
+        }
+        &::after{
+          opacity: 0;
+        }
+    }
+    .next{
+        right: 10vw;
+          width: 70px;
+            /* 画像の幅に合わせて調整 */
+            height: 70px;
+            /* 画像の高さに合わせて調整 */
+            background-size: cover;
+            /* 画像をボタンサイズにフィットさせる */
+            background-repeat: no-repeat;
+        background-image: url('/assets/image/top/allowRight.svg');
+          @include xs{
+            width: 40px;
+            height: 40px;
+            right: 20px;
+          }
+          &::after {
+              opacity: 0;
+            }
+    }
+  }
+  .mainCopy{
+    font-size: 32px;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 25%;
+    transform: translateY(50%);
+    @include xs{
+      position: static;
+      transform: translateY(0);
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .colors{
+    position: absolute;
+    bottom: 20%;
+    transform: translateY(50%);
+    right: 10%;
+        @include xs {
+            position: static;
+            transform: translateY(0);
+          }
+  }
+}
+
+.tokutyo{
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include xs{
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+    &__each{
+      width: 22%;
+      @include xs{
+        width: 46%;
+        margin-bottom: 40px;
+      }
+      >img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.leading{
+  &__contents{
+    &__intro{
+      font-size: 18px;
+      color: #333333;
+      @include xs{
+        font-size: 16px;
+        text-align: left;
+      }
+      &__underline{
+        font-size: 24px;
+        position: relative;
+        display: inline;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -5px;
+          height: 5px;
+          /* アンダーラインの厚さ */
+          background-color: $main-color;
+          /* アンダーラインの色 */
+          width: 100%;
+          transform: skewX(-30deg);
+          z-index: 0;
+        }
+      }
+    }
+    &__axes{
+      display: flex;
+      justify-content: space-between;
+      @include xs {
+        display: block;
+      }
+      &__each{
+        max-width: 400px;
+        width: 100%;
+        margin-right: 30px;
+        background-color: $sub-color;
+      @include xs {
+          margin-bottom: 30px;
+        }
+        &:last-of-type{
+          margin-right: 0;
+        }
+        &__media{
+
+        }
+        &__text{
+          text-align: center;
+          line-height: 1.5;
+          padding: 25px;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+.p-mainMenu{
+  display: flex;
+  @include xs{
+    display: block;
+  }
+  &__media{
+    width: calc(50vw - 40px);
+    margin-right: 40px;
+    @include xs{
+      width: calc(100% - 20px);
+      margin-bottom: 20px;
+    }
+    >img{
+      
+    }
+    &--reverse {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+  }
+  &__text{
+    width: 650px;
+    // background-color: #eeff00;
+    margin-right: 20px;
+    @include xs{
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    >h2{
+
+    }
+  &--reverse {
+      margin-left: 20px;
+      margin-right: 0;
+      @include xs{
+        margin-left: 0;
+      }
+    }
+    >p{
+      margin-bottom: 40px;
+      @include xs{
+
+      }
+    }
+  }
+  &--reverse{
+    flex-direction: row-reverse;
+  }
+}
+
+.infomation{
+
+      p {
+          margin-bottom: 40px;
+        }
+  &__content{
+    display: flex;
+      padding: 40px;
+      background-color: #FFF7E1;
+      border-radius: 15px;
+      @include xs{
+        display: block;
+        padding: 20px;
+      }
+      &__text{
+        width: 50%;
+        @include xs{
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        h2{
+          font-size: 24px;
+          text-decoration: underline 2px $main-pink;
+          margin-bottom: 40px;
+          @include xs{
+            font-size: 18px;
+          }
+        }
+        &__desc{
+          font-size: 24px;
+          line-height: 1.5;
+          @include xs{
+            font-size: 14px;
+          }
+        }
+      }
+      &__media{
+        width: 50%;
+        border-radius: 15px;
+        @include xs{
+          width: 100%;
+        }
+        >figure{
+          width: 440px;
+          height: 95px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 40px;
+          border-radius: 15px;
+          @include xs{
+            width: 100%;
+          }
+          >img{
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &__btn{
+          width: 340px;
+          margin-left: auto;
+          margin-right: auto;
+          @include xs{
+            width: 100%;
+          }
+          >a{
+            width: 100%;
+          }
+        }
+      }
+  }
+}
+
+
+
+.news{
+  background-color: #FFF7E1;
+  padding-bottom: 40px;
+  &__titleWrapper{
+    text-align: center;
+  }
+    .newsList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    &__each{
+      padding: 20px;
+      min-width: 390px;
+      width: 390px;
+      margin-bottom: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+        box-sizing: border-box;
+        /* パディングやボーダーを幅に含める */
+      @include xs{
+        width: 100%;
+        min-width: 0;
+      }
+      &__media{
+        margin-bottom: 20px;
+        border: 2px solid $main-green;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+        >img{
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__titles{
+        margin-bottom: 20px;
+        display: flex;
+        &__date{
+          margin-right: 10px;
+        }
+        h2{
+          text-decoration: underline 2px $main-yellow;
+        }
+      }
+      &__text{
+        display: flex;
+        justify-content: space-between;
+        p{
+          margin-right: 20px;
+          width: calc(100% - 65px);
+          height: 50px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        &__btn{
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+  }
+  &__btn{
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    >a{
+        width: 100%;
+    }
+  }
+}
+
+.p-contact{
+  @include xs{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .c-inner{
+      background-color: $main-yellow;
+      border-radius: 10px;
+      padding: 40px;
+      @include xs{
+        padding: 20px;
+      }
+  }
+  &__title{
+    text-align: center;
+    >.c-secTitle{
+      display: inline-block;
+
+    }
+  }
+  &__desc{
+    text-align: center;
+    margin-bottom: 60px;
+    @include xs{
+      margin-bottom: 40px;
+    }
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    @include xs{
+      display: block;
+    }
+    &__each{
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      width: 450px;
+      position: relative;
+      margin-right: 80px;
+      @include xs{
+        margin-right: 0;
+        margin-bottom: 40px;
+        width: 100%;
+      }
+      &.mail{
+        margin-right: 0;
+      }
+      &__icon{
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        @include xs{
+          position: static;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      &__title{
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        @include xs{
+          font-size: 14px;
+        }
+      }
+      p{
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      &__btn{
+        width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        @include xs{
+          width: 100%;
+        }
+        >a{
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

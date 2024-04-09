@@ -1,0 +1,174 @@
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+.recruitMv {
+  background-image: url("../images/recruit/mv.png");
+}
+
+#recruit {
+  .message{
+    margin-bottom: 80px;
+    &__title{
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-weight: 100;
+      @include xs{
+        font-size: 18px;
+      }
+    }
+    p{
+      text-align: center;
+      @include xs{
+        text-align: left;
+      }
+    }
+  }
+
+  .requirements{
+    background-image: url("../images/recruit/back.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    // height: 200px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 200px;
+    @include xs{
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-bottom: 80px;
+    }
+    &__text{
+      color: #fff;
+      font-size: 12px;
+      width: 50%;
+      margin-left: auto;
+      @include xs{
+        width: 100%;
+      }
+    }
+  }
+
+  .recruitment{
+    margin-bottom: 200px;
+    .wrapper{
+      text-align: center;
+    }
+    &__each{
+      max-width: 1000px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 120px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &__title{
+        margin-bottom: 20px;
+      }
+    }
+    .p-table{
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .flow{
+    background-color: $main-color;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 80px;
+    &__title{
+      color: #fff;
+    }
+    &__list{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      @include xs{
+        display: block;
+      }
+      &__item{
+        background-color: #fff;
+        padding: 20px;
+        max-width: 310px;
+        width: 100%;
+        height: 300px;
+        @include xs{
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+          height: auto;
+        }
+        &__title{
+          margin-bottom: 20px;
+          font-size: 16px;
+          @include xs{
+            text-align: center;
+          }
+        }
+        &__media {
+            max-width: 130px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p{
+          font-size: 14px;
+          @include xs{
+            text-align: center;
+          }
+        }
+      }
+
+    }
+
+    .c-imageBandAnim{
+      &::before{
+      background-color: $main-color;
+      }
+    }
+
+
+  }
+
+  .form{
+    margin-bottom: 120px;
+    &__leading{
+      margin-bottom: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .btns {
+        display: flex;
+        // justify-content: space-between;
+        justify-content: center;
+        gap: 20px;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        @include xs{
+          display: block;
+          width: 100%;
+        }
+    
+        >a {
+    
+          background-color: #fff;
+    
+          &:last-of-type {
+            margin-right: 0;
+            @include xs{
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+  }
+}

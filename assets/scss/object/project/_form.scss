@@ -1,0 +1,89 @@
+$form-background: #f0f0f0;
+$form-border-color: #333;
+$input-background: #fff;
+$input-border-color: #aaa;
+$button-background: #333;
+$button-color: #fff;
+$label-color: #333;
+
+.p-form {
+  // background-color: $fff;
+  padding: 20px;
+  border: 1px solid $main-color;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__label {
+    color: $label-color;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    &__required{
+      color: red;
+      font-size: 10px;
+      font-weight: 100;
+      margin-left: 5px;
+    }
+  }
+
+  &__input,
+  &__select,
+  &__tesxt__area {
+    font-size: 14px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    background-color: $input-background;
+       
+  }
+  
+
+  &__submit {
+    background-color: $main-color;
+    color: $button-color;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    min-width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &:hover {
+      background-color: #005198;
+    }
+  }
+
+input[type="submit"]{
+      background-color: $main-color;
+        color: $button-color;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+        min-width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      
+        &:hover {
+          background-color: #005198;
+        }
+  }
+
+  .mimiLabel{
+    width: 200px;
+    @include xs{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.p-secMv{
+  width: 100%;
+  height: 350px;
+  background-image: none;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 110px;
+  margin-bottom: 25px;
+  // overflow: hidden;
+  // position: relative;
+  // visibility: hidden;
+
+  @include xs{
+    height: 200px;
+    margin-top: 60px;
+  }
+  &__inner{
+    height: 100%;
+    position: relative;
+    &__title{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      padding-top: 40px;
+      padding-bottom: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background: rgba(255,255,255,0.7);
+      min-width: 320px;
+      @include xs{
+        min-width: 250px;
+      }
+      &__main{
+        font-size: 48px;
+        font-weight: 100;
+        font-family: "Gothic A1",sans-serif;
+        margin-bottom: 5px;
+        text-align: center;
+        @include xs {
+            font-size: 28px;
+          }
+      }
+      &__sub{
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// .animated-band::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 200%;
+//   width: 120%;
+//   height: 100%;
+//   background-color: $accent-color;
+//   // display: none;
+//   z-index: 5;
+//   visibility: visible;
+//     /* 親要素を非表示にする */
+// }
+
+// .animated-band.animate::before {
+//   display: block;
+//   animation: slideBand 2.5s forwards linear;
+// }
+
+// @keyframes slideBand {
+//   from {
+//     left: 200%;
+//   }
+
+//   to {
+//     left: -120%;
+//   }
+// }

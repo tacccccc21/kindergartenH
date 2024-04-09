@@ -1,0 +1,45 @@
+.p-table {
+  width: 100%;
+  border-collapse: collapse;
+  @include xs{
+    display: block;
+  }
+  tbody{
+    // width: 100vw;
+    min-width: calc(100vw - 40px);
+  }
+  &__row {
+    border-bottom: 1px solid $main-color; 
+  }
+
+  &__row:first-child {
+    border-top: 1px solid $main-color; 
+  }
+
+  &__cell {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+      @include xs {
+          display: block;
+          padding-top: 10px;
+          min-width: calc(100vw - 40px);
+        }
+  }
+
+  &__header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: left;
+    font-size: 12px;
+
+      @include xs {
+          display: block;
+          padding-bottom: 0;
+              min-width: calc(100vw - 40px);
+        }
+  }
+}

@@ -1,0 +1,12 @@
+.c-animFadeIn{
+  opacity : 0;
+  transform : translate(0, 50px);
+  transition : all 0.3s;
+  @include xs{
+    transform : translate(0, 30px);
+  }
+  &.is-active{
+    opacity : 1;
+    transform : translate(0, 0);
+  }
+}

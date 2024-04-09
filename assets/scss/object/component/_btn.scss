@@ -1,0 +1,13 @@
+.c-btn{
+  padding: 15px 70px 15px 70px;
+  border: $main-yellow 1px solid;
+  background-color: $main-yellow;
+  display: inline-block;
+  color: #333333;
+  text-align: center;
+  border-radius: 30px;
+  @include xs{
+      text-align: center;
+      display: block;
+  }
+}

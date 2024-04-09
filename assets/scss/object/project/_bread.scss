@@ -1,0 +1,13 @@
+.p-bread{
+  
+  .c-inner{
+    color: rgb(183, 183, 183);
+  }
+  &__anc{
+    color: rgb(183, 183, 183);
+    transition: all 0.3s;
+    &:hover{
+      color: #333333;
+    }
+  }
+}

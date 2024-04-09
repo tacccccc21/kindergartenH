@@ -1,0 +1,7 @@
+.p-sec{
+  margin-bottom: 150px;
+  padding-top: 30px;
+  @include xs{
+    margin-bottom: 80px;
+  }
+}

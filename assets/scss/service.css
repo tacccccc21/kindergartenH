@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.serviceMv {
+  background-image: url("../images/service/mv.png");
+}
+
+#service .service__contents {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents {
+    display: block;
+  }
+}
+
+#service .service__contents__each {
+  width: 50%;
+  padding: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+#service .service__contents__each__explanation {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each__explanation {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each .serviceList {
+    margin-bottom: 20px;
+  }
+}
+
+#service .service__contents__each .serviceList__item {
+  display: flex;
+  margin-bottom: 50px;
+  border: 1px solid #004EA2;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each .serviceList__item {
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+#service .service__contents__each .serviceList__item__media {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each .serviceList__item__media {
+    width: 100%;
+    height: 0px;
+    display: flex;
+    /* Flexboxコンテナとして設定 */
+    align-items: stretch;
+    /* 子要素を縦方向に伸ばす */
+    background-color: #004EA2;
+  }
+}
+
+#service .service__contents__each .serviceList__item__media > img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each .serviceList__item__media > img {
+    flex-grow: 1;
+    /* imgを幅いっぱいに伸ばす */
+    object-fit: cover;
+    /* 画像をうまくフィットさせる */
+  }
+}
+
+#service .service__contents__each .serviceList__item__text {
+  padding: 20px;
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  #service .service__contents__each .serviceList__item__text {
+    width: 100%;
+  }
+}
+
+#service .service__contents__each .serviceList__item__text__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#service .service__contents__each .serviceList__item__text__explanation {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+#service .service__contents__each .serviceList__item__text .c-btn {
+  color: #004EA2;
+  width: 100%;
+  text-align: center;
+}

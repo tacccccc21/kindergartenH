@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Noto+Sans+JP:wght@100;200;300;400&family=Zen+Maru+Gothic:wght@300&display=swap');
+
+// common
+  a{
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+// ~commom
+*{
+  color: #333333;
+  letter-spacing: 0.02em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html{
+  margin-top: 0 !important;
+    background-color: #FFFDED !important;
+}
+main{
+  min-height: 100vh;
+}
+
+p{
+  line-height: 1.7 !important;
+  font-weight: 100 !important;
+  // font-size: 14px
+}
+
+img{
+  width: 100%;
+}
+
+
+// foundation
+@import "./foundation/reset";
+@import "./foundation/base";
+
+// object/component
+@import "./object/component/inner";
+@import "./object/component/btn";
+@import "./object/component/animFadeIn";
+@import "./object/component/secTitle.scss";
+@import "./object/component/intro";
+@import "./object/component/imageBandAnim";
+
+
+// object/project
+@import "./object/project/_sec";
+@import "./object/project/_form";
+@import "./object/project/_secMv";
+@import "./object/project/_bread";
+@import "./object/project/_staticPageSectionTitle";
+@import "./object/project/_table";
+
+// layout
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/footer";
+@import "./layout/loader";
+
+// utility
+@import "./object/utility/align";
+@import "./object/utility/alpha";
+@import "./object/utility/clearfix";
+@import "./object/utility/disp";
+@import "./object/utility/event";
+@import "./object/utility/font";
+@import "./object/utility/margin";
+@import "./object/utility/padding";
+@import "./object/utility/position";
+@import "./object/utility/vertical";
+
+
+
+
+

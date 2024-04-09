@@ -1,0 +1,32 @@
+.c-imageBandAnim{
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    width: 150%;
+    /* 必要に応じて調整 */
+    height: 130%;
+    /* 必要に応じて調整 */
+    // background-color: rgba(255, 255, 83, 1);
+    background-color: #fff;
+    /* 背景色、透明度を調整 */
+    color: white;
+    /* 文字色 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0 , -50%) skewX(-20deg);
+    transition: transform 0.8s ease;
+    z-index: 10;
+  }
+}
+
+.is-scroll {
+  &::before {
+  transform: translate(-150%,-50%) skewX(-20deg);
+  }
+}

@@ -1,0 +1,79 @@
+.l-footer {
+background-color: #FFF7E1;
+padding-top: 60px;
+padding-bottom: 60px;
+  @include xs{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    @include xs{
+      // display: block;
+      margin-bottom: 20px;
+    }
+  }
+  .footerInfo{
+    margin-right: 40px;
+    @include xs{
+      margin-bottom: 20px;
+      width: 70%;
+    }
+    >a{
+      font-size: 24px;
+      display: block;
+      margin-bottom: 30px;
+      @include xs{
+        margin-bottom: 10px;
+      }
+    }
+    .mail{
+      margin-bottom: 10px;
+    }
+    .copyPc {
+      font-size: 12px;
+      text-align: center;
+      @include xs{
+        display: none;
+      }
+    }
+  }
+
+  .menu{
+    justify-content: space-between;
+    display: flex;
+    width: 70%;
+    @include xs{
+      
+      width: 30%;
+      display: block;
+    }
+    ul{
+      li{
+        margin-bottom: 15px;
+        a{
+        @include xs {
+            display: none;
+          }
+        }
+        >.main{
+          font-size: 21px;
+          @include xs{
+            display: block;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+    .copySp {
+      font-size: 12px;
+      text-align: center;
+      display: none;
+      @include xs {
+        display: block;
+      }
+    }
+}

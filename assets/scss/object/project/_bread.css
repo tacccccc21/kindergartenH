@@ -1,0 +1,12 @@
+.p-bread .c-inner {
+  color: #b7b7b7;
+}
+
+.p-bread__anc {
+  color: #b7b7b7;
+  transition: all 0.3s;
+}
+
+.p-bread__anc:hover {
+  color: #333333;
+}

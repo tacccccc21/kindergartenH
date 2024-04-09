@@ -1,0 +1,107 @@
+// 設定
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+.aboutMv{
+  background-image: url("../images/about/mv.png");
+}
+// ページ固有
+#about{
+  section{
+    margin-bottom: 200px;
+    @include xs{
+      margin-bottom: 80px;
+    }
+  }
+  .about{
+
+  }
+  .message{
+    &__contents{
+      display: flex;
+      justify-content: space-between;
+      @include xs{
+        display: block;
+      }
+      &__media{
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        @include xs {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+        >img{
+          @include xs{
+            width: 100%;
+          }
+        }
+      }
+      &__text{
+        width: 65%;
+        margin-left: 80px;
+        @include xs {
+            width: 100%;
+            margin-left: 0;
+          }
+      }
+    }
+  }
+
+  .history{
+    // background-color: aquamarine;
+    &__contents{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      height: 527px;
+      @include xs{
+        height: auto;
+        display: block;
+      }
+      &__text{
+        width: 60%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include xs {
+            width: 100%;
+            position: static;
+            margin-bottom: 30px;
+          }
+      }
+      &__media{
+        width: 50%;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        opacity: 0.7;
+        @include xs {
+            width: 100%;
+            position: static;
+          }
+      }
+    }
+  }
+
+  .information{
+    &__contents{
+      max-width: 800px;
+      width: 100%;
+      // margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .recruit {
+    @include xs {
+      margin-bottom: 0;
+    }
+  }
+  .contact{
+    @include xs{
+      margin-bottom: 0;
+    }
+  }
+}

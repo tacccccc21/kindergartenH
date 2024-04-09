@@ -1,0 +1,13 @@
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+html{
+  
+}
+
+#single {
+  .news{
+    margin-bottom: 120px;
+  }
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+p{
+  line-height: 1.7;
+  @include xs{
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family:  "Noto Sans JP", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: -0.03em;
+  text-size-adjust: 100%;
+  // min-width: 1160px;
+  overflow-x: hidden;
+  @include xs{
+    min-width: 0;
+  }
+}
+
+img {
+  // width: 100%;
+  vertical-align: bottom;
+  max-width: 100%;
+  @include xs{
+    min-width: auto;
+  }
+}

@@ -1,0 +1,11 @@
+.c-intro{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 80px;
+  line-height: 1.73;
+  @include xs{
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}

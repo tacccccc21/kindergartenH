@@ -1,0 +1,33 @@
+
+.c-secTitle{
+  font-size: 32px;
+  margin-left: 25px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  @include xs{
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  &::after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $main-green;
+    position: absolute;
+    right: -30px;
+    top: 5px;
+  }
+  &::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $main-green;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    // transform: translateY(-50%);
+  }
+}
