@@ -1,10 +1,14 @@
 .p-bread{
-  
+  margin-bottom: 80px;
+  font-size: 12px;
+  @include xs{
+    margin-bottom: 40px;
+  }
   .c-inner{
     color: rgb(183, 183, 183);
   }
   &__anc{
-    color: rgb(183, 183, 183);
+    color: #663C15;
     transition: all 0.3s;
     &:hover{
       color: #333333;

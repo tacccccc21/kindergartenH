@@ -1,3 +1,90 @@
-#single .news {
-  margin-bottom: 120px;
+#newsSinglePost {
+  margin-bottom: 150px;
+}
+
+#newsSinglePost .singlePostWrapper {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 20px;
+}
+
+#newsSinglePost .singlePostWrapper .date {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#newsSinglePost .singlePostWrapper h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  text-decoration: underline 2px #FFDAD8;
+}
+
+@media only screen and (max-width: 768px) {
+  #newsSinglePost .singlePostWrapper h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+#newsSinglePost .singlePostWrapper h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #newsSinglePost .singlePostWrapper h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+#newsSinglePost .singlePostWrapper h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #newsSinglePost .singlePostWrapper h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+#newsSinglePost .singlePostWrapper h4 {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #newsSinglePost .singlePostWrapper h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+#newsSinglePost .singlePostWrapper h5 {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #newsSinglePost .singlePostWrapper h5 {
+    font-size: 15px;
+  }
+}
+
+#newsSinglePost .singlePostWrapper p {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+#newsSinglePost .singlePostWrapper img {
+  margin-bottom: 40px;
+  max-height: 450px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  border: 2px solid #DFFF8F;
 }

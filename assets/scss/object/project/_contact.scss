@@ -1,0 +1,97 @@
+.p-contact{
+    @include xs{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .c-inner{
+        background-color: $main-yellow;
+        border-radius: 10px;
+        padding: 40px;
+        @include xs{
+          padding: 20px;
+        }
+    }
+    &__title{
+      text-align: center;
+      
+      >.c-secTitle{
+        margin-left: 0;
+      }
+
+    }
+    &__desc{
+      text-align: center;
+      margin-bottom: 60px;
+      @include xs{
+        margin-bottom: 20px;
+      }
+    }
+    .menu{
+      display: flex;
+      justify-content: center;
+      @include xs{
+        display: block;
+      }
+      &__each{
+        padding: 25px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        width: 450px;
+        position: relative;
+        margin-right: 80px;
+        @include xs{
+          margin-right: 0;
+          margin-bottom: 20px;
+          width: 100%;
+        }
+        &:last-of-type{
+          @include xs{
+            margin-bottom: 0;
+          }
+        }
+        &.mail{
+          margin-right: 0;
+        }
+        &__icon{
+          width: 70px;
+          height: 70px;
+          position: absolute;
+          top: -20px;
+          left: -20px;
+          @include xs{
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+        &__title{
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 20px;
+          @include xs{
+            font-size: 14px;
+          }
+        }
+        p{
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        &__btn{
+          width: 340px;
+          margin-left: auto;
+          margin-right: auto;
+          @include xs{
+            width: 100%;
+          }
+          >a{
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }

@@ -2,6 +2,77 @@
 @import "./function";
 @import "./mixin";
 
-.contactMv {
-  background-image: url("../images/news/mv.png");
+#contact{
+
+  .p-mv{
+    background-image: url("/assets/image/common/gtouzi/event1.JPG");
+  }
+
+  .form{
+    &__title{
+      text-align: center;
+    }
+    .contents{
+      max-width: 850px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 15px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      @include xs{
+        padding: 20px;
+      }
+      .item{
+        margin-bottom: 40px;
+        label{
+          display: block;
+          margin-bottom: 10px;
+        }
+        input{
+          padding: 8px;
+          border: 2px solid $main-pink;
+          border-radius: 10px;
+          width: 50%;
+          &[type=checkbox]{
+
+          }
+          &[type=text] {
+            
+          }
+          &[type=number]{
+            
+          }
+          &[type=email] {
+            width: 100%;
+          }
+          &:focus{
+            outline: 2px solid $main-green;
+            outline-offset: -2px;
+          }
+          @include xs{
+            width: 100%;
+          }
+        }
+        textarea{
+          width: 100%;
+          min-height: 300px;
+          padding: 8px;
+          border: 2px solid $main-pink;
+          border-radius: 10px;
+          @include xs{
+            min-height: 200px;
+          }
+          &:focus-visible {
+              outline: 2px solid $main-green;
+              outline-offset: -2px;
+          }
+          
+        }
+      &__btn{
+        text-align: center;
+      }
+    }
+  }
+}
 }

@@ -3,158 +3,132 @@
 @import "./function";
 @import "./mixin";
 
-.newsMv {
-  background-image: url("../images/news/mv.png");
-}
+
 
 #news {
   .news {
-    margin-bottom: 80px;
-    .titleWrapper{
-      text-align: center;
+      // background-color: #FFF7E1;
+      padding-bottom: 40px;
+      position: relative;
       @include xs{
-        text-align: left;
+        background-image: url("/assets/image/news/newsBgSp@2x.png");
+        background-size: 100% auto;
       }
-    }
-    &__title{
-
-    }
-    &__contents {
-   
-
-      @include xs {
-        display: block;
-      }
-      .nav{
-        width: 100%;
-        max-width: 1000px;
-        padding: 20px 0;
-        margin-left: auto;
-        margin-right: auto;
-        border-top: 1px solid $main-color;
-        border-bottom: 1px solid $main-color;
-        margin-bottom: 20px;
-        &__list{
-          display: flex;
-          justify-content: center;
+      &__title {
+        text-align: center;
+        h1{
           @include xs{
-            display: block;
-          }
-          &__item{
-            margin-right: 15px;
-            align-items: center;
-            @include xs{
-              margin-right: 0;
-              margin-bottom: 15px;
-              text-align: center;
-              padding: 3px 20px;
-            }
-            &:last-of-type{
-              @include xs{
-              margin-bottom: 0;
-              }
-            }
-            >a{
-              font-size: 12px;
-              padding: 3px 20px;
-              background-color: $main-color;
-              color: #fff;
-              transition: all 0.3s;
-              &:hover{
-                opacity: 0.7;
-              }
-            }
+            margin-left: 0;
           }
         }
       }
-      .newsList{
-        margin-left: auto;
-        margin-right: auto;
+  
+      .newsList {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: center;
-        gap: 50px;
+        justify-content: space-between;
         margin-bottom: 40px;
-        max-width: 970px;
-        &__item{
-          padding-bottom: 25px;
-          max-width: 460px;
-          width: 100%;
-          border-bottom: 1px solid $main-color;
-          &__media{
-            aspect-ratio: 3 / 2;
+        min-width: 1200px;
+        @include xs{
+          min-width: 0;
+        }
+        &__each {
+          padding: 20px;
+          min-width: 390px;
+          width: 390px;
+          margin-bottom: 40px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-sizing: border-box;
+  
+          /* パディングやボーダーを幅に含める */
+          @include xs {
             width: 100%;
-            max-width: 460px;
-            overflow: hidden;
-            margin-bottom: 25px;
-            >img{
+            min-width: 0;
+          }
+  
+          &__media {
+            margin-bottom: 20px;
+            border: 2px solid $main-green;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+  
+            >img {
+              border-radius: 10px;
               width: 100%;
               height: 100%;
               object-fit: cover;
-              object-position: center;
             }
           }
-          &__text{
-            &__info{
-              display: flex;
-              align-items: center;
-              margin-bottom: 15px;
-              &__date{
-                font-size: 12px;
-                margin-right: 10px;
-              }
-              &__tag{
-                font-size: 12px;
-                padding: 3px 10px;
-                background-color: $main-color;
-                color: #fff;
-              }
+  
+          &__titles {
+            margin-bottom: 20px;
+            display: flex;
+  
+            &__date {
+              margin-right: 10px;
+            }
+  
+            h2 {
+              text-decoration: underline 2px $main-yellow;
+            }
+          }
+  
+          &__text {
+            display: flex;
+            justify-content: space-between;
+  
+            p {
+              margin-right: 20px;
+              width: calc(100% - 65px);
+              height: 50px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+  
+            &__btn {
+              width: 45px;
+              height: 45px;
             }
           }
         }
       }
-      .pagenation {
-        width: 100%;
-        max-width: 1000px;
-        padding: 20px 0;
+  
+      .pagenation{
+        width: 800px;
+        border-top: 2px #FFDAD8 solid;
+        border-bottom: 2px #FFDAD8 solid;
         margin-left: auto;
         margin-right: auto;
-        border-top: 1px solid $main-color;
-        border-bottom: 1px solid $main-color;
-        margin-bottom: 20px;
-          display: flex;
-          justify-content: center;
-          &__item {
-            margin-right: 15px;
-            align-items: center;
-            @include xs {
-              margin-right: 0;
-              margin-bottom: 15px;
-              text-align: center;
-              padding: 3px 20px;
-            }
-
-            &:last-of-type {
-              @include xs {
-                margin-bottom: 0;
-              }
-            }
-            &.current{
-              pointer-events: none;
-              opacity: 0.5;
-            }
-            >a {
-              font-size: 12px;
-
-              transition: all 0.3s;
-
-              &:hover {
-                opacity: 0.7;
-              }
-            }
+        text-align: center;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        @include xs{
+          width: 100%;
+        }
+        >a{
+          margin-right: 5px;
+          &.current{
+            text-decoration: underline;
+            pointer-events: none;
           }
-        
+        }
+      }
+
+      .mark{
+        position: absolute;
+        @include xs{
+          display: none;
+        }
+        &--1{
+          top: 0;
+          right: 8%;
+        }
+        &--2 {
+          left: 8%;
+          bottom: 0;
+        }
       }
     }
-  }
 }

@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+@import "./config";
+@import "./function";
+@import "./mixin";
+
+
+#gallery{
+  .leading{
+    // background-color: azure;
+    height: 1200px;
+    position: relative;
+
+    @include xs{
+        height: auto;
+    }
+    h1{
+        font-size: 48px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        text-decoration: underline 2px $main-green;
+        position: relative;
+            z-index: 1;
+    }
+    p{
+        position: relative;
+        z-index: 1;
+    }
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -20px;
+        left: 0;
+        @include xs{
+            display: none;
+        }
+    }
+  }
+
+  .state{
+    &__title{
+       text-align: center;
+       >h1{
+        margin-left: 0;
+       }
+    }
+
+    .c-inner{
+        @include xs{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .photoContents{
+        margin-bottom: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        @include xs{
+          border-radius: 0;
+        }
+        &--green{
+            background-color: $main-green;
+        }
+        &--pink{
+            background-color: $main-pink;
+        }
+        &--yellow{
+            background-color: $main-yellow;
+        }
+
+        h2{
+            text-align: center;
+            font-style: 24px;
+            margin-bottom: 20px;
+        }
+        .list{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @include xs{
+                display: block;
+            }
+            &__each{
+                width: 32%;
+                
+                @include xs{
+                    width: 100%;
+                }
+                &__media{
+                    border-radius: 10px;
+                    aspect-ratio: 16 / 9;
+                    object-fit: cover;
+                    object-position: center;
+                    @include xs{
+                        margin-bottom: 20px;   
+                    }
+                    >img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+  }
+}

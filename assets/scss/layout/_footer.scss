@@ -1,5 +1,5 @@
 .l-footer {
-background-color: #FFF7E1;
+background-color: #FFF18D;
 padding-top: 60px;
 padding-bottom: 60px;
   @include xs{
@@ -9,9 +9,43 @@ padding-bottom: 60px;
   &__inner{
     display: flex;
     justify-content: space-between;
+    position: relative;
     @include xs{
       // display: block;
       margin-bottom: 20px;
+    }
+    .bird{
+      position: absolute;
+      @include xs{
+        width: 55px;
+      }
+      &--green{
+        bottom: 20px;
+        right: 220px;
+        @include xs{
+          bottom: -25px;
+          right: auto;
+          left: 20px;
+        }
+      }
+      &--pink{
+        bottom: -20px;
+        right: 400px;
+        @include xs {
+            bottom: -15px;
+            right: auto;
+            left: 90px;
+          }
+      }
+      &--yellow{
+        bottom: 0px;
+        right: 20px;
+        @include xs {
+            bottom: -20px;
+            right: auto;
+            left: 165px;
+          }
+      }
     }
   }
   .footerInfo{
@@ -44,6 +78,8 @@ padding-bottom: 60px;
     justify-content: space-between;
     display: flex;
     width: 70%;
+    position: relative;
+    z-index: 1;
     @include xs{
       
       width: 30%;
@@ -68,12 +104,12 @@ padding-bottom: 60px;
     }
   }
 
-    .copySp {
-      font-size: 12px;
-      text-align: center;
-      display: none;
-      @include xs {
-        display: block;
-      }
+  .copySp {
+    font-size: 12px;
+    text-align: center;
+    display: none;
+    @include xs {
+      display: block;
     }
+  }
 }

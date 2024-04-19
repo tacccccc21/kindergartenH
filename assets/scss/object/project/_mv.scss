@@ -1,0 +1,23 @@
+.p-mv{
+    width: 100%;
+    max-width: 100vw;
+    // min-width: 1140px;
+    height: 400px;
+    background-image: url(/assets/image/top/mvPic1mv1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include xs{
+        height: 200px;
+        min-width: 0;
+    }
+    h1{
+        font-size: 48px;
+        text-align: center;
+        color: #fff;
+        display: block;
+    }
+}

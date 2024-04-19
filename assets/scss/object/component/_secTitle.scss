@@ -18,6 +18,11 @@
     position: absolute;
     right: -30px;
     top: 5px;
+    @include xs{
+      top: 3px;
+      width: 20px;
+      height: 20px;
+    }
   }
   &::before{
     content: "";
@@ -29,5 +34,26 @@
     left: -30px;
     top: 5px;
     // transform: translateY(-50%);
+    @include xs {
+        top: 3px;
+        width: 20px;
+        height: 20px;
+      }
+  }
+  &--pink{
+    &::before{
+      background-color: $main-pink;
+    }
+    &::after{
+      background-color: $main-pink;
+    }
+  }
+  &--yellow{
+    &::before{
+      background-color: $main-yellow;
+    }
+    &::after{
+      background-color: $main-yellow;
+    }
   }
 }

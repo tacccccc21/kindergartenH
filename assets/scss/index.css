@@ -55,6 +55,8 @@
   /* スライドの高さを親要素と同じにする */
   border-radius: 20%;
   width: 1000px !important;
+  aspect-ratio: 2/1;
+  border-radius: 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -66,10 +68,11 @@
 .mv__container__slider__each > img {
   /* 画像の最大幅をスライドの幅に合わせる */
   /* 画像の最大高さをスライドの高さに合わせる */
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   /* 画像のアスペクト比を保持 */
+  border-radius: 15px;
 }
 
 .mv__container__pagenation {
@@ -77,6 +80,10 @@
 }
 
 .mv__container .prev {
+  z-index: 2;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 250px;
   left: 10vw;
   width: 70px;
   /* 画像の幅に合わせて調整 */
@@ -93,6 +100,7 @@
     width: 40px;
     height: 40px;
     left: 20px;
+    top: 50%;
   }
 }
 
@@ -101,6 +109,10 @@
 }
 
 .mv__container .next {
+  z-index: 2;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 250px;
   right: 10vw;
   width: 70px;
   /* 画像の幅に合わせて調整 */
@@ -117,6 +129,7 @@
     width: 40px;
     height: 40px;
     right: 20px;
+    top: 50%;
   }
 }
 
@@ -125,11 +138,12 @@
 }
 
 .mv .mainCopy {
-  font-size: 32px;
+  font-size: 48px;
   line-height: 1.5;
   position: absolute;
   bottom: 25%;
   transform: translateY(50%);
+  z-index: 1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -141,18 +155,33 @@
   }
 }
 
-.mv .colors {
-  position: absolute;
-  bottom: 20%;
-  transform: translateY(50%);
-  right: 10%;
+.mv .mainCopy .copy1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  width: 320px;
+  padding: 5px 10px;
 }
 
-@media only screen and (max-width: 768px) {
-  .mv .colors {
-    position: static;
-    transform: translateY(0);
-  }
+.mv .mainCopy .copy2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  width: auto;
+  padding: 5px 10px;
+}
+
+.mv .colors {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: calc(100% - 500px);
+}
+
+.mv .colors > img {
+  width: 100%;
+  height: calc(100vh - 620px);
+  object-fit: cover;
+  object-position: bottom right;
 }
 
 .tokutyo__list {
@@ -253,6 +282,7 @@
 
 .p-mainMenu {
   display: flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -276,6 +306,12 @@
 .p-mainMenu__media--reverse {
   margin-right: 0;
   margin-left: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-mainMenu__media--reverse {
+    margin-left: 20px;
+  }
 }
 
 .p-mainMenu__text {
@@ -501,128 +537,4 @@
 
 .news__btn > a {
   width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.p-contact .c-inner {
-  background-color: #FFF18D;
-  border-radius: 10px;
-  padding: 40px;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact .c-inner {
-    padding: 20px;
-  }
-}
-
-.p-contact__title {
-  text-align: center;
-}
-
-.p-contact__title > .c-secTitle {
-  display: inline-block;
-}
-
-.p-contact__desc {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact__desc {
-    margin-bottom: 40px;
-  }
-}
-
-.p-contact .menu {
-  display: flex;
-  justify-content: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact .menu {
-    display: block;
-  }
-}
-
-.p-contact .menu__each {
-  padding: 25px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  width: 450px;
-  position: relative;
-  margin-right: 80px;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact .menu__each {
-    margin-right: 0;
-    margin-bottom: 40px;
-    width: 100%;
-  }
-}
-
-.p-contact .menu__each.mail {
-  margin-right: 0;
-}
-
-.p-contact .menu__each__icon {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: -20px;
-  left: -20px;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact .menu__each__icon {
-    position: static;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.p-contact .menu__each__title {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact .menu__each__title {
-    font-size: 14px;
-  }
-}
-
-.p-contact .menu__each p {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.p-contact .menu__each__btn {
-  width: 340px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media only screen and (max-width: 768px) {
-  .p-contact .menu__each__btn {
-    width: 100%;
-  }
-}
-
-.p-contact .menu__each__btn > a {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }

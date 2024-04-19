@@ -57,6 +57,9 @@
 
           border-radius: 20%;
           width: 1000px !important;
+          // height: 500px;
+          aspect-ratio: 2/1;
+          border-radius: 15px;
           @include xs{
             width: 100% !important; 
           }
@@ -65,10 +68,11 @@
               /* 画像の最大幅をスライドの幅に合わせる */
               // max-height: 100%;
               /* 画像の最大高さをスライドの高さに合わせる */
-              object-fit: contain;
+              object-fit: cover;
               width: 100%;
               height: 100%;
               /* 画像のアスペクト比を保持 */
+              border-radius: 15px;
           }
       }
     }
@@ -76,6 +80,10 @@
       bottom: -20px !important;
     }
     .prev{
+        z-index: 2;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 250px;
         left: 10vw;
         width: 70px;
         /* 画像の幅に合わせて調整 */
@@ -89,12 +97,17 @@
           width: 40px;
           height: 40px;
           left: 20px;
+          top: 50%;
         }
         &::after{
           opacity: 0;
         }
     }
     .next{
+        z-index: 2;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 250px;
         right: 10vw;
           width: 70px;
             /* 画像の幅に合わせて調整 */
@@ -108,6 +121,7 @@
             width: 40px;
             height: 40px;
             right: 20px;
+            top: 50%;
           }
           &::after {
               opacity: 0;
@@ -115,27 +129,44 @@
     }
   }
   .mainCopy{
-    font-size: 32px;
+    font-size: 48px;
     line-height: 1.5;
     position: absolute;
     bottom: 25%;
     transform: translateY(50%);
+    z-index: 1;
     @include xs{
       position: static;
       transform: translateY(0);
       font-size: 24px;
       margin-bottom: 20px;
     }
+    .copy1 {
+      background-color: rgba($color: #ffffff, $alpha: .8);
+      margin-bottom: 20px;
+      width: 320px;
+      padding: 5px 10px;
+    }
+    .copy2{
+      background-color: rgba($color: #ffffff, $alpha: .8);
+      margin-bottom: 20px;
+      width: auto;
+      padding: 5px 10px;
+    }
   }
   .colors{
     position: absolute;
-    bottom: 20%;
-    transform: translateY(50%);
-    right: 10%;
-        @include xs {
-            position: static;
-            transform: translateY(0);
-          }
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(100% - 500px);
+
+      >img{
+        width: 100%;
+        height: calc(100vh - 620px);
+        object-fit: cover;
+        object-position: bottom right;
+    }
   }
 }
 
@@ -224,6 +255,7 @@
 
 .p-mainMenu{
   display: flex;
+  align-items: center;
   @include xs{
     display: block;
   }
@@ -240,6 +272,9 @@
     &--reverse {
       margin-right: 0;
       margin-left: 40px;
+      @include xs{
+        margin-left: 20px;
+      }
     }
   }
   &__text{
@@ -425,94 +460,3 @@
   }
 }
 
-.p-contact{
-  @include xs{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .c-inner{
-      background-color: $main-yellow;
-      border-radius: 10px;
-      padding: 40px;
-      @include xs{
-        padding: 20px;
-      }
-  }
-  &__title{
-    text-align: center;
-    >.c-secTitle{
-      display: inline-block;
-
-    }
-  }
-  &__desc{
-    text-align: center;
-    margin-bottom: 60px;
-    @include xs{
-      margin-bottom: 40px;
-    }
-  }
-  .menu{
-    display: flex;
-    justify-content: center;
-    @include xs{
-      display: block;
-    }
-    &__each{
-      padding: 25px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      width: 450px;
-      position: relative;
-      margin-right: 80px;
-      @include xs{
-        margin-right: 0;
-        margin-bottom: 40px;
-        width: 100%;
-      }
-      &.mail{
-        margin-right: 0;
-      }
-      &__icon{
-        width: 70px;
-        height: 70px;
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        @include xs{
-          position: static;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 20px;
-          width: 40px;
-          height: 40px;
-        }
-      }
-      &__title{
-        font-size: 24px;
-        text-align: center;
-        margin-bottom: 20px;
-        @include xs{
-          font-size: 14px;
-        }
-      }
-      p{
-        margin-bottom: 20px;
-        text-align: center;
-      }
-      &__btn{
-        width: 340px;
-        margin-left: auto;
-        margin-right: auto;
-        @include xs{
-          width: 100%;
-        }
-        >a{
-          width: 100%;
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-    }
-  }
-}

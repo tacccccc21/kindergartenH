@@ -27,7 +27,9 @@
 
 html{
   margin-top: 0 !important;
-    background-color: #FFFDED !important;
+  background-color: #FFFDED !important;
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
 main{
   min-height: 100vh;
@@ -64,6 +66,9 @@ img{
 @import "./object/project/_bread";
 @import "./object/project/_staticPageSectionTitle";
 @import "./object/project/_table";
+@import "./object/project/_modal";
+@import "./object/project/_mv";
+@import "./object/project/_contact";
 
 // layout
 @import "./layout/header";
