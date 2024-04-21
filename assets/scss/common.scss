@@ -30,6 +30,10 @@ html{
   background-color: #FFFDED !important;
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
+  // min-width: 1200px;
+  @include xs{
+    // min-width: 280px;
+  }
 }
 main{
   min-height: 100vh;

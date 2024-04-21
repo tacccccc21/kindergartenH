@@ -20,3 +20,44 @@ var mySwiper = new Swiper('.swiper-container', {
 });
 
 // swiper
+
+
+
+// colors
+const fluffy = (target) => {
+  const startTime = performance.now()
+
+  // 振幅にランダムな値を設定
+  const amplitude = {
+    x: -7 + Math.random() * 10,  // -5 から 5 の範囲でランダム
+    y: 3 + Math.random() * 10    // 5 から 15 の範囲でランダム
+  }
+
+  // 速度にランダムな値を設定
+  const speed = {
+    x: 0.0002 + Math.random() * 0.0006,  // 0.0002 から 0.0008 の範囲でランダム
+    y: 0.0002 + Math.random() * 0.001   // 0.0005 から 0.002 の範囲でランダム
+  }
+
+  const tick = () => {
+    const diff = performance.now() - startTime
+    const x = amplitude.x * Math.sin(speed.x * diff)
+    const y = amplitude.y * Math.sin(speed.y * diff)
+
+    target.style.transform = `translate(${x}%, ${y}%)`
+
+    requestAnimationFrame(tick)
+  }
+
+  tick()
+}
+
+// .bird クラスを持つ全ての要素を取得
+const fluffyTargets = document.querySelectorAll('.js-color')
+
+// 取得した全要素に対して fluffy 関数を適用
+fluffyTargets.forEach(target => {
+  if (target) {
+    fluffy(target)
+  }
+})

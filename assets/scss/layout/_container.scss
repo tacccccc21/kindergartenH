@@ -3,10 +3,12 @@
   position: relative;
   margin-top: 120px;
   // margin-bottom: 200px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+  min-width: 1340px;
   @include xs{
     margin-top: 60px;
+    min-width: 0;
     // margin-bottom: 130px;
   }
 }

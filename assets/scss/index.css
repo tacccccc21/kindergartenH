@@ -28,8 +28,7 @@
 @media only screen and (max-width: 768px) {
   .mv {
     height: auto;
-    margin-bottom: 100px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -137,6 +136,10 @@
   opacity: 0;
 }
 
+.mv .c-inner {
+  min-height: calc(100% - 500px);
+}
+
 .mv .mainCopy {
   font-size: 48px;
   line-height: 1.5;
@@ -148,10 +151,9 @@
 
 @media only screen and (max-width: 768px) {
   .mv .mainCopy {
-    position: static;
-    transform: translateY(0);
     font-size: 24px;
-    margin-bottom: 20px;
+    bottom: 10%;
+    display: block;
   }
 }
 
@@ -162,11 +164,25 @@
   padding: 5px 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  .mv .mainCopy .copy1 {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+
 .mv .mainCopy .copy2 {
   background-color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
   width: auto;
   padding: 5px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mv .mainCopy .copy2 {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 
 .mv .colors {
@@ -177,11 +193,51 @@
   min-height: calc(100% - 500px);
 }
 
+@media only screen and (max-width: 768px) {
+  .mv .colors {
+    min-height: 0;
+    position: relative;
+  }
+}
+
 .mv .colors > img {
   width: 100%;
   height: calc(100vh - 620px);
   object-fit: cover;
   object-position: bottom right;
+}
+
+@media only screen and (max-width: 768px) {
+  .mv .colors > img {
+    height: 100%;
+  }
+}
+
+.mv .colors__copy {
+  position: absolute;
+  width: 170px;
+  bottom: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .mv .colors__copy {
+    width: 15%;
+  }
+}
+
+.mv .colors__copy--pink {
+  right: 35%;
+  bottom: 25%;
+}
+
+.mv .colors__copy--green {
+  right: 20%;
+  bottom: 45%;
+}
+
+.mv .colors__copy--yellow {
+  right: 5%;
+  bottom: 35%;
 }
 
 .tokutyo__list {
@@ -294,6 +350,7 @@
 .p-mainMenu__media {
   width: calc(50vw - 40px);
   margin-right: 40px;
+  min-width: 48%;
 }
 
 @media only screen and (max-width: 768px) {

@@ -110,9 +110,9 @@ const fly = (target) => {
   
   // 振幅と回転にランダムな値を設定
   const amplitude = {
-    x: -5 + Math.random() * 10,  // -5 から 5 の範囲でランダム
-    y: 5 + Math.random() * 10,   // 5 から 15 の範囲でランダム
-    rotation: -3 + Math.random() * 6  // -3 から 3 の範囲でランダム
+    x: -20 + Math.random() * 20,  // -5 から 5 の範囲でランダム
+    y: -15 + Math.random() * 5,   // 5 から 15 の範囲でランダム
+    rotation: -7 + Math.random() * 8  // -3 から 3 の範囲でランダム
   }
 
   // 速度にランダムな値を設定
